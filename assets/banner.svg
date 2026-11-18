@@ -1,0 +1,190 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1d" />
+      <stop offset="50%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#020617" />
+    </linearGradient>
+
+    <!-- Glowing Accents -->
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#818cf8" />
+      <stop offset="100%" stop-color="#c084fc" />
+    </linearGradient>
+
+    <radialGradient id="glowLeft" cx="20%" cy="30%" r="50%">
+      <stop offset="0%" stop-color="#6366f1" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#6366f1" stop-opacity="0" />
+    </radialGradient>
+
+    <radialGradient id="glowRight" cx="80%" cy="70%" r="50%">
+      <stop offset="0%" stop-color="#0ea5e9" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#0ea5e9" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Filter for glow -->
+    <filter id="glowFilter" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <style>
+      .title-text {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        font-weight: 800;
+        font-size: 46px;
+        fill: #f8fafc;
+        letter-spacing: -0.5px;
+      }
+      .tagline-text {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        font-weight: 500;
+        font-size: 20px;
+        fill: #94a3b8;
+      }
+      .badge-text {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        font-weight: 600;
+        font-size: 13px;
+        fill: #38bdf8;
+      }
+      .bubble-text {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        font-weight: 600;
+        font-size: 12px;
+      }
+
+      /* Dynamic Animations (subtle background/side elements that NEVER obscure foreground text) */
+      @keyframes floatLeft {
+        0%, 100% { transform: translateY(0px) rotate(0deg); }
+        50% { transform: translateY(-10px) rotate(1deg); }
+      }
+      @keyframes floatRight {
+        0%, 100% { transform: translateY(0px) rotate(0deg); }
+        50% { transform: translateY(12px) rotate(-1.5deg); }
+      }
+      @keyframes pulseGlow {
+        0%, 100% { opacity: 0.35; transform: scale(1); }
+        50% { opacity: 0.65; transform: scale(1.08); }
+      }
+      @keyframes signalFlow {
+        0% { stroke-dashoffset: 60; }
+        100% { stroke-dashoffset: 0; }
+      }
+
+      .floating-card-left {
+        animation: floatLeft 6s ease-in-out infinite;
+      }
+      .floating-card-right {
+        animation: floatRight 7s ease-in-out infinite;
+      }
+      .pulse-beacon {
+        animation: pulseGlow 4s ease-in-out infinite;
+      }
+      .animated-stream {
+        stroke-dasharray: 6 10;
+        animation: signalFlow 2s linear infinite;
+      }
+    </style>
+  </defs>
+
+  <!-- Canvas Background -->
+  <rect width="1200" height="400" rx="16" fill="url(#bgGrad)" />
+
+  <!-- Ambient Glowing Orbs in Background -->
+  <circle cx="250" cy="180" r="280" fill="url(#glowLeft)" class="pulse-beacon" />
+  <circle cx="950" cy="220" r="260" fill="url(#glowRight)" class="pulse-beacon" />
+
+  <!-- Subtle High-tech Grid Background Pattern -->
+  <g stroke="#334155" stroke-width="0.5" opacity="0.3">
+    <line x1="100" y1="0" x2="100" y2="400" />
+    <line x1="300" y1="0" x2="300" y2="400" />
+    <line x1="500" y1="0" x2="500" y2="400" />
+    <line x1="700" y1="0" x2="700" y2="400" />
+    <line x1="900" y1="0" x2="900" y2="400" />
+    <line x1="1100" y1="0" x2="1100" y2="400" />
+    <line x1="0" y1="80" x2="1200" y2="80" />
+    <line x1="0" y1="160" x2="1200" y2="160" />
+    <line x1="0" y1="240" x2="1200" y2="240" />
+    <line x1="0" y1="320" x2="1200" y2="320" />
+  </g>
+
+  <!-- Dynamic Messaging Connections & Data Stream Lines (Background) -->
+  <g opacity="0.45">
+    <path d="M 80,100 C 140,40 180,140 220,110" fill="none" stroke="#6366f1" stroke-width="2" class="animated-stream" />
+    <path d="M 980,290 C 1030,340 1080,260 1140,310" fill="none" stroke="#38bdf8" stroke-width="2" class="animated-stream" />
+  </g>
+
+  <!-- Left Dynamic Element: Mini Chat Thread Floating Card (Subtle, Background-Side) -->
+  <g class="floating-card-left" opacity="0.85">
+    <rect x="50" y="240" width="180" height="95" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1.5" />
+    <circle cx="75" cy="265" r="12" fill="#38bdf8" />
+    <text x="75" y="269" font-family="sans-serif" font-size="11" fill="#0f172a" font-weight="bold" text-anchor="middle">#dev</text>
+    <rect x="95" y="258" width="115" height="12" rx="4" fill="#334155" />
+    
+    <rect x="70" y="285" width="140" height="35" rx="8" fill="#0f172a" />
+    <circle cx="85" cy="302" r="6" fill="#10b981" />
+    <text x="98" y="306" class="bubble-text" fill="#cbd5e1">ChatOps Deploy: 200 OK</text>
+  </g>
+
+  <!-- Right Dynamic Element: Matrix/Federation Peer Floating Card (Subtle, Background-Side) -->
+  <g class="floating-card-right" opacity="0.85">
+    <rect x="970" y="65" width="180" height="95" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1.5" />
+    <circle cx="995" cy="90" r="12" fill="#818cf8" />
+    <text x="995" y="94" font-family="sans-serif" font-size="12" fill="#ffffff" font-weight="bold" text-anchor="middle">[m]</text>
+    <rect x="1015" y="84" width="115" height="12" rx="4" fill="#334155" />
+
+    <rect x="990" y="110" width="140" height="35" rx="8" fill="#0f172a" />
+    <circle cx="1005" cy="127" r="6" fill="#38bdf8" />
+    <text x="1018" y="131" class="bubble-text" fill="#93c5fd">E2EE Stream Active</text>
+  </g>
+
+  <!-- FOREGROUND: Clean, Highly Legible Centerpiece (Guaranteed Unobscured) -->
+  <g>
+    <!-- Top Pill Category Badge -->
+    <g transform="translate(425, 65)">
+      <rect x="0" y="0" width="350" height="34" rx="17" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5" opacity="0.95" />
+      <circle cx="20" cy="17" r="5" fill="#38bdf8" class="pulse-beacon" />
+      <text x="180" y="22" class="badge-text" text-anchor="middle">⚡ ENTERPRISE &amp; OPEN-SOURCE ECOSYSTEM</text>
+    </g>
+
+    <!-- Main Title -->
+    <text x="600" y="165" class="title-text" text-anchor="middle" filter="url(#glowFilter)">
+      Awesome Internal Business Messaging
+    </text>
+
+    <!-- Subtitle / Tagline -->
+    <text x="600" y="215" class="tagline-text" text-anchor="middle">
+      Curated Hub of SaaS Platforms &amp; Self-Hosted sovereign Chat Networks
+    </text>
+
+    <!-- Feature Attribute Badges -->
+    <g transform="translate(260, 260)">
+      <!-- Pill 1: Team Chat -->
+      <g transform="translate(0, 0)">
+        <rect x="0" y="0" width="150" height="36" rx="18" fill="#1e293b" stroke="#475569" stroke-width="1" />
+        <text x="75" y="22" font-family="sans-serif" font-size="13" font-weight="600" fill="#f1f5f9" text-anchor="middle">💬 Team Chat</text>
+      </g>
+      <!-- Pill 2: Matrix & XMPP -->
+      <g transform="translate(165, 0)">
+        <rect x="0" y="0" width="170" height="36" rx="18" fill="#1e293b" stroke="#475569" stroke-width="1" />
+        <text x="85" y="22" font-family="sans-serif" font-size="13" font-weight="600" fill="#f1f5f9" text-anchor="middle">🌐 Matrix &amp; XMPP</text>
+      </g>
+      <!-- Pill 3: ChatOps & Bots -->
+      <g transform="translate(350, 0)">
+        <rect x="0" y="0" width="160" height="36" rx="18" fill="#1e293b" stroke="#475569" stroke-width="1" />
+        <text x="80" y="22" font-family="sans-serif" font-size="13" font-weight="600" fill="#f1f5f9" text-anchor="middle">🤖 ChatOps &amp; Bots</text>
+      </g>
+      <!-- Pill 4: Voice & Video -->
+      <g transform="translate(525, 0)">
+        <rect x="0" y="0" width="155" height="36" rx="18" fill="#1e293b" stroke="#475569" stroke-width="1" />
+        <text x="77" y="22" font-family="sans-serif" font-size="13" font-weight="600" fill="#f1f5f9" text-anchor="middle">🎙️ Voice &amp; Video</text>
+      </g>
+    </g>
+
+    <!-- Bottom Accent Gradient Line -->
+    <rect x="350" y="335" width="500" height="3" rx="1.5" fill="url(#accentGrad)" />
+  </g>
+</svg>
