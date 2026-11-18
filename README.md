@@ -6,7 +6,7 @@
 
 <p align="center">
   <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a><a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
-  <a href="https://github.com/ishandutta2007/Awesome-Internal-Business-Messaging/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Internal-Business-Messaging?style=flat-square&logo=github&color=gold" alt="GitHub Stars"/></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Internal-Business-Messaging/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Internal-Business-Messaging?style=flat-square&logo=github&color=gold" alt="GitHub_Stars"/></a>
   <a href="https://github.com/ishandutta2007/Awesome-Internal-Business-Messaging/network/members"><img src="https://img.shields.io/github/forks/ishandutta2007/Awesome-Internal-Business-Messaging?style=flat-square&logo=github&color=blue" alt="GitHub Forks"/></a>
   <a href="https://github.com/ishandutta2007/Awesome-Internal-Business-Messaging/issues"><img src="https://img.shields.io/github/issues/ishandutta2007/Awesome-Internal-Business-Messaging?style=flat-square&color=green" alt="Issues"/></a>
   <a href="https://github.com/ishandutta2007/Awesome-Internal-Business-Messaging/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-CC0--1.0-orange?style=flat-square" alt="License"/></a>
@@ -66,7 +66,7 @@ The sector is **highly concentrated and dominated by a few massive platform ecos
 
 ## 🔓 Open-Source GitHub Projects
 
-*Sorted by GitHub Star count in descending order. Each star badge links directly to that repository's stargazers page.*
+*Sorted by GitHub Stars_Count in descending order. Each Stars_Badge links directly to that repository's stargazers page.*
 
 1. **[Rocket.Chat](https://github.com/RocketChat/Rocket.Chat)** [![Stars](https://img.shields.io/github/stars/RocketChat/Rocket.Chat?style=social&color=white)](https://github.com/RocketChat/Rocket.Chat/stargazers) 🌟  
    Feature-rich open-source team communication platform supporting real-time chat, audio/video conferencing, Matrix federation, and extensive marketplace apps.
@@ -156,7 +156,7 @@ The sector is **highly concentrated and dominated by a few massive platform ecos
 ## 🤝 How to Contribute
 
 1. 🍴 Fork the repo.
-2. ✍️ Add or update entries in `README.md` (ensure pricing, limits, star badges, and links follow existing format).
+2. ✍️ Add or update entries in `README.md` (ensure pricing, limits, Stars_Badges, and links follow existing format).
 3. 🔗 Include: name, link, concise factual description, and categorization.
 4. 🚀 Submit a PR with a short explanation.
 
